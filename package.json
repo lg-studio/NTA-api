@@ -1,0 +1,45 @@
+{
+  "name": "jan-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "set NODE_ENV=test&& node --harmony test\\util\\testDatabase.js && mocha --harmony test\\tests.js",
+    "testAdmin": "set NODE_ENV=test&& node --harmony test\\util\\testDatabase.js && mocha --harmony test\\adminTests.js",
+    "start": "set NODE_ENV=prod&& node --harmony app.js",
+    "dev": "set NODE_ENV=dev&& nodemon --harmony app.js",
+    "db": "set NODE_ENV=dev&& node --harmony test/util/testDatabase.js"
+  },
+  "author": "Oleh Chaplya",
+  "dependencies": {
+    "async": "^1.2.1",
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.2.0",
+    "body-parser": "^1.12.4",
+    "colors": "^1.1.2",
+    "express": "^4.12.4",
+    "express-session": "^1.11.3",
+    "forever": "^0.14.1",
+    "helmet": "^0.10.0",
+    "mongoose": "^4.0.6",
+    "morgan": "^1.6.0",
+    "multiparty": "^4.1.2",
+    "node-gcm": "^0.10.0",
+    "node-uuid": "^1.4.3",
+    "nodemon": "^1.3.7",
+    "passport": "^0.2.2",
+    "passport-local": "^1.0.0",
+    "revalidator": "^0.3.1",
+    "sendgrid": "^1.9.2",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5",
+    "neo4j": "^2.0.0-RC2",
+    "neo4j-bulk": "^0.1.3",
+    "nodemon": "^1.3.7",
+    "request-json": "^0.5.3",
+    "superagent": "^1.2.0"
+  }
+}
